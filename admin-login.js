@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://moneywise-backend.onrender.com/api/auth';
 
 const loginForm = document.getElementById('login-form');
 if (loginForm) {
