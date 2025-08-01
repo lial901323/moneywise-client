@@ -1,58 +1,41 @@
-# moneywise-client
 
+# 💰 MoneyWise Frontend
 
-# 🧠 MoneyWise Backend
-
-This is the backend for the **MoneyWise** budget management application. Built using **Node.js**, **Express**, and **MongoDB** with Mongoose.
+This is the frontend for the **MoneyWise** budget management application. It is built using **HTML**, **CSS**, and **vanilla JavaScript** to provide a user-friendly interface for tracking expenses and deposits.
 
 ## 📁 Folder Structure
 
 ```
-moneywise-backend/
+moneywise-frontend/
 │
-├── app.js               # Main server file
-├── db.js                # MongoDB connection setup
-├── .env                 # Environment variables
-├── routes/              # API route definitions
-├── controllers/         # Logic for routes
-├── models/              # Mongoose schemas (User, Expense, Deposit)
-├── middleware/          # JWT auth and role checks
-├── package.json         # Dependencies
+├── index.html              # Login page
+├── sign-up.html            # Signup page
+├── user-home.html          # User dashboard
+├── admin-dashboard.html    # Admin dashboard
+├── style.css               # General styling
+├── script.js               # Main JS logic
+├── user-home.js            # Logic for user dashboard
+├── admin-login.js          # Admin login logic
+├── history.js              # For showing transaction history
+├── images/                 # Contains UI images
 ```
 
-## 🔐 Authentication
+## 🚀 Features
 
-- Uses JWT for secure login sessions
-- Middleware for role-based access control (`user` vs `admin`)
+- User and Admin login/signup
+- Role-based dashboard views
+- Add/view expenses and deposits
+- View balance updates
+- Admin dashboard with charts and user management
+- Responsive design
 
-## 🔍 Features
+## 📦 Setup
 
-- CRUD for expenses and deposits
-- Aggregation stats (daily logins, top users)
-- Admin user management (view, delete)
-- External API support planned (e.g., currency exchange)
+Just open `index.html` in your browser.
+Make sure the backend server is running on `http://localhost:5000` (or your configured API URL).
 
-## 🚀 Setup
+## 📊 Dependencies
 
-1. Install dependencies:
-```bash
-npm install
-```
-
-2. Create a `.env` file with the following:
-```env
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-PORT=5000
-```
-
-3. Start the server:
-```bash
-node app.js
-```
-
-Runs on: `https://moneywise-backend.onrender.com`
-
-## 🧪 API
-
-You can test all endpoints via Postman.
+- Chart.js (for charts)
+- Fetch API (to communicate with backend)
+- LocalStorage (for JWT token handling)
